@@ -1,0 +1,107 @@
+body {
+    background-color: #ffefd5;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 50px;
+    background-image: url('./img/uolter.jpeg'), url('./img/uolter.jpeg');
+    background-repeat: repeat-y;
+    background-position: left top, right top;
+    background-size: 50px 50px;
+}
+
+.container, .image-container, .video-container {
+    display: inline-block;
+    text-align: center;
+    background: #f8e8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 2em;
+    animation: bounce 1s infinite;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.balloons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.balloon {
+    width: 100px;
+    height: 130px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 20px;
+    animation: float 2s ease-in-out infinite;
+}
+
+.balloon::before {
+    content: '';
+    width: 2px;
+    height: 40px;
+    background-color: #888;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.image-container h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+}
+
+.icon {
+    width: 1em;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.video-container video {
+    max-width: 100%;
+    height: auto;
+}
